@@ -7,7 +7,7 @@
 		"dockerfile": "Dockerfile",
 		// Update 'VARIANT' to pick an Debian version: bullseye, buster, stretch
 		// Use bullseye or stretch on local arm64/Apple Silicon.
-		"args": { "VARIANT": "debian-11" }
+		"args": { "VARIANT": "experimental" }
 	},
 
 	// Set *default* container specific settings.json values on container create.

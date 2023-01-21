@@ -4,12 +4,16 @@
 #define BOOST_ASIO_DISABLE_EPOLL
 
 #include <boost/asio.hpp>
+#include <boost/container/vector.hpp>
+#include <filesystem>
 
 using boost::asio::awaitable;
 using boost::asio::buffer;
 using boost::asio::detached;
 using boost::asio::use_awaitable;
 using boost::asio::ip::tcp;
+using boost::asio::stream_file;
+
 awaitable<void> echo(tcp::socket s)
 {
     try
