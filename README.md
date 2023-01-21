@@ -2,22 +2,21 @@
 
 <a href="https://gitpod.io/#https://github.com/wahabshah/boost-asio-iouring" rel="nofollow noopener noreferrer" target="_blank" class="after:hidden"><img src="https://gitpod.io/button/open-in-gitpod.svg" alt="Open in Gitpod"></a>
 
-* The repository is using boot asio with io-uring library and coroutines
 * io-uring support has been added to kernel since 5.1 :
     ```sh
     uname -r
     # 5.15.0-47-generic
     ```
-* Boost Asio got support for co-routines as well
+* Boost Asio 1.74 got support for C++20 stackless coroutines
 * [Boost Asio 1.78](https://www.boost.org/doc/libs/1_78_0/doc/html/boost_asio/history.html) got support for filesytem to use io-uring
+* The repository combines the boot asio using io-uring library along with coroutines to read and write to a file:-
+    ```sh
+    rm -rf build && mkdir -p build && \
+    (cd build && cmake -DCMAKE_BUILD_TYPE=Debug .. && make clean all VERBOSE=1) && \
+    ./build/filesystem-coroutine
+    ```
 
-
-```sh
-rm -rf build && mkdir -p build && \
-(cd build && cmake -DCMAKE_BUILD_TYPE=Debug .. && make clean all VERBOSE=1) && \
-./build/filesystem-coroutine
-```
-
+## Links
 * https://stackoverflow.com/questions/70632719/asio-reading-stream-file-asynchronously-fails-with-coroutines-and-alternatives
 * https://www.boost.org/doc/libs/1_78_0/doc/html/boost_asio/history.html
 * https://fmt.dev/latest/usage.html#usage-with-cmake
