@@ -1,0 +1,11 @@
+image:
+  file: .devcontainer/Dockerfile
+  context: .devcontainer
+ports:
+  - port: 1083
+  - port: 1084
+vscode:
+  extensions:
+    - webfreak.debug
+    - ms-vscode.cmake-tools
+    - twxs.cmake
