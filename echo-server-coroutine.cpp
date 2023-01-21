@@ -6,6 +6,7 @@
 #include <boost/asio.hpp>
 #include <boost/container/vector.hpp>
 #include <filesystem>
+#include <fmt/format.h>
 
 using boost::asio::awaitable;
 using boost::asio::buffer;
@@ -56,7 +57,7 @@ boost::asio::awaitable<boost::container::vector<std::byte>> read_file_async(
                                  boost::asio::file_base::read_only | boost::asio::file_base::exclusive);
 
    if (!file.is_open()) {
-     throw std::runtime_error(fmt::format("Could not open {}", p._c_str()));
+     throw std::runtime_error(fmt::format("Could not open {}", p.c_str()));
    }
    constexpr std::size_t block_size = 1024 * 1024 * 2; 
    boost::container::vector<std::byte> buf(block_size, boost::container::default_init); 
@@ -85,9 +86,6 @@ boost::asio::awaitable<boost::container::vector<std::byte>> read_file_async(
 
 int main()
 {
-    //boost::asio::io_context ctx;
-    //co_spawn(ctx,listen({ctx, {tcp::v4(), 1084}}),detached);
-    //ctx.run();
 
 boost::asio::io_context ctx;
 auto the_task =
@@ -95,6 +93,11 @@ auto the_task =
        boost::asio::any_io_executor executor = co_await boost::asio::this_coro::executor;
        auto file_contents = co_await read_file_async(executor, p);
    };
+
+   std::vector<std::string> rng = {
+      R"(/workspace/boost-asio-iouring/README.md)"
+  };
+
   for (const auto &file_path : rng)
     boost::asio::co_spawn(ctx, the_task(file_path), boost::asio::detached);
   ctx.run();
