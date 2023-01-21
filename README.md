@@ -2,6 +2,9 @@
 
 <a href="https://gitpod.io/#https://github.com/wahabshah/boost-asio-iouring" rel="nofollow noopener noreferrer" target="_blank" class="after:hidden"><img src="https://gitpod.io/button/open-in-gitpod.svg" alt="Open in Gitpod"></a>
 
+* The repository is using boot asio with io-uring library and coroutines
+* Boost Asio 1.78 got support for filesytem to use io-uring
+
 ```sh
 uname -r
 # 5.15.0-47-generic
