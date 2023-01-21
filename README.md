@@ -3,12 +3,14 @@
 <a href="https://gitpod.io/#https://github.com/wahabshah/boost-asio-iouring" rel="nofollow noopener noreferrer" target="_blank" class="after:hidden"><img src="https://gitpod.io/button/open-in-gitpod.svg" alt="Open in Gitpod"></a>
 
 * The repository is using boot asio with io-uring library and coroutines
-* Boost Asio 1.78 got support for filesytem to use io-uring
+* io-uring support has been added to kernel since 5.1 :
+    ```sh
+    uname -r
+    # 5.15.0-47-generic
+    ```
+* Boost Asio got support for co-routines as well
+* [Boost Asio 1.78](https://www.boost.org/doc/libs/1_78_0/doc/html/boost_asio/history.html) got support for filesytem to use io-uring
 
-```sh
-uname -r
-# 5.15.0-47-generic
-```
 
 ```sh
 rm -rf build && mkdir -p build && \
