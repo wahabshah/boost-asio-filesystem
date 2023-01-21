@@ -4,4 +4,4 @@ FROM debian:experimental
 
 #** [Optional] Uncomment this section to install additional packages. **
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends build-essential libboost-dev liburing-dev cmake gdb
+    && apt-get -y install --no-install-recommends build-essential git libboost-dev liburing-dev cmake gdb
