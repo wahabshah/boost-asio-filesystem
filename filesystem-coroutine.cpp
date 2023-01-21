@@ -16,7 +16,6 @@ using boost::asio::use_awaitable;
 using boost::asio::ip::tcp;
 
 awaitable<void> writeAndreadFile(boost::asio::io_context &my_io_context) {
-
   try {
     std::filesystem::path path1 = "/workspace/boost-asio-iouring/test.txt";
     char data1[1024] = "Hello World";
