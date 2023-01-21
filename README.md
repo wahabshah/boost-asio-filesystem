@@ -2,7 +2,7 @@
 
 <a href="https://gitpod.io/#https://github.com/wahabshah/boost-asio-iouring" rel="nofollow noopener noreferrer" target="_blank" class="after:hidden"><img src="https://gitpod.io/button/open-in-gitpod.svg" alt="Open in Gitpod"></a>
 
-* io-uring support has been added to kernel since 5.1 :
+* [io-uring support has been added to kernel since 5.1](https://unix.stackexchange.com/a/596281) :-
     ```sh
     uname -r
     # 5.15.0-47-generic
