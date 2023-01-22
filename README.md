@@ -5,7 +5,8 @@
 * [io-uring support has been added to kernel since 5.1](https://unix.stackexchange.com/a/596281) :-
     ```sh
     uname -r
-    # 5.15.0-47-generic
+    # 5.15.0-47-generic  gitpod
+    # 5.4.0-1098-azure   codespaces
     ```
 * [Boost Asio 1.74](https://www.boost.org/doc/libs/1_74_0/doc/html/boost_asio/history.html) got support for C++20 stackless coroutines
 * [Boost Asio 1.78](https://www.boost.org/doc/libs/1_78_0/doc/html/boost_asio/history.html) got support for filesytem to use io-uring
