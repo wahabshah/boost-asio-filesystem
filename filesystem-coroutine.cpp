@@ -14,10 +14,10 @@ using boost::asio::buffer;
 using boost::asio::detached;
 using boost::asio::use_awaitable;
 using boost::asio::ip::tcp;
-
+namespace fs = std::filesystem;
 awaitable<void> writeAndreadFile(boost::asio::io_context &my_io_context) {
   try {
-    std::filesystem::path path1 = "/workspace/boost-asio-iouring/test.txt";
+    std::filesystem::path path1 = fs::current_path() /= "test.txt";
     char data1[1024] = "Hello World";
     std::size_t n1 = 11;
     boost::asio::stream_file file(my_io_context,
