@@ -8,6 +8,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install libboost-dev -t experimental
 
 # Create the gitpod user. UID must be 33333.
-RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod
+RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod \
+    && echo gitpod ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/gitpod \
+    && chmod 0440 /etc/sudoers.d/gitpod
 
 USER gitpod
