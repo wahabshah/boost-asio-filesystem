@@ -32,3 +32,4 @@
 * https://packages.debian.org/bookworm/liburing-dev
 * https://stackoverflow.com/questions/71590689/how-to-properly-handle-windows-paths-with-the-long-path-prefix-with-stdfilesys
 * https://stackoverflow.com/questions/29191855/what-is-the-proper-way-to-use-pkg-config-from-cmake
+* https://github.com/boostorg/asio/blob/boost-1.78.0/example/cpp11/files/async_file_copy.cpp
