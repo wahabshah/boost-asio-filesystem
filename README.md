@@ -7,12 +7,12 @@
 * [io-uring support has been added to kernel since 5.1](https://unix.stackexchange.com/a/596281) :-
     ```sh
     uname -r
+    # 5.4.0-1098-azure              github codespaces
     # 5.15.0-47-generic             gitpod
-    # 5.4.0-1098-azure              codespaces
     # 5.10.102.1-microsoft-standard WSL
     ```
 * [Boost Asio 1.74](https://www.boost.org/doc/libs/1_74_0/doc/html/boost_asio/history.html) got support for C++20 stackless coroutines
-* [Boost Asio 1.78](https://www.boost.org/doc/libs/1_78_0/doc/html/boost_asio/history.html) got support for filesytem to use io-uring
+* [Boost Asio 1.78](https://www.boost.org/doc/libs/1_78_0/doc/html/boost_asio/history.html) got support for filesytem due to io-uring
 * The repository combines the boot asio using io-uring library along with coroutines to read and write to a file:-
     ```sh
     rm -rf build && mkdir -p build && \
