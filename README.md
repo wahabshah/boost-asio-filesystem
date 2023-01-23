@@ -8,8 +8,8 @@
     ```sh
     uname -r
     # 5.4.0-1098-azure              github codespaces
-    # 5.15.0-47-generic             gitpod
     # 5.10.102.1-microsoft-standard WSL
+    # 5.15.0-47-generic             gitpod
     ```
 * [Boost Asio 1.74](https://www.boost.org/doc/libs/1_74_0/doc/html/boost_asio/history.html) got support for C++20 stackless coroutines
 * [Boost Asio 1.78](https://www.boost.org/doc/libs/1_78_0/doc/html/boost_asio/history.html) got support for filesytem due to io-uring
