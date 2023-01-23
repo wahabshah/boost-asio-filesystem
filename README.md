@@ -11,8 +11,8 @@
     # 5.10.102.1-microsoft-standard WSL
     # 5.15.0-47-generic             gitpod
     ```
-* [Boost Asio 1.74](https://www.boost.org/doc/libs/1_74_0/doc/html/boost_asio/history.html) got support for C++20 stackless coroutines
-* [Boost Asio 1.78](https://www.boost.org/doc/libs/1_78_0/doc/html/boost_asio/history.html) got support for filesytem due to io-uring
+* [Asio 1.18.0 / Boost 1.74](https://www.boost.org/doc/libs/1_74_0/doc/html/boost_asio/history.html) got support for C++20 stackless coroutines
+* [Asio 1.22.0 / Boost 1.78](https://www.boost.org/doc/libs/1_78_0/doc/html/boost_asio/history.html) got support for filesytem with I/O completion ports on Windows, and io_uring on Linux
 * The repository combines the boot asio using io-uring library along with coroutines to read and write to a file:-
     ```sh
     rm -rf build && mkdir -p build && \
